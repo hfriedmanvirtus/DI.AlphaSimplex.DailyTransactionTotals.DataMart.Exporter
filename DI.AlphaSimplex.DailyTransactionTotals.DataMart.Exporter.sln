@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "DI.AlphaSimplex.DailyTransactionTotals.DataMart.Exporter", "DI.AlphaSimplex.DailyTransactionTotals.DataMart.Exporter\DI.AlphaSimplex.DailyTransactionTotals.DataMart.Exporter.dtproj", "{4156E9B9-7156-497A-925E-5A36D2F3944D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4156E9B9-7156-497A-925E-5A36D2F3944D}.Development|Default.ActiveCfg = Development
+		{4156E9B9-7156-497A-925E-5A36D2F3944D}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DC663A4B-CD7C-470A-8D93-06CEF6D7A1EF}
+	EndGlobalSection
+EndGlobal
