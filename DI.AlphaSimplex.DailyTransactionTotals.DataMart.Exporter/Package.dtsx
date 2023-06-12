@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{1B5F5EA1-2A60-4200-9FA6-8362A72C1BEE}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{9918EA18-FAFB-4D3D-B89A-28EF02DF87FC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -57,6 +57,117 @@
           DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\test\astest1.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C90C2EBC-98E5-4F85-9151-9655580CE08F}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\test\AlphaSimplexTransactions.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PostingDate"
+              DTS:DTSID="{17415F27-FDC2-4E9A-B484-040450651F55}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FundName"
+              DTS:DTSID="{31DD21A4-9FDC-4169-B524-0755DE4EE49E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Channel"
+              DTS:DTSID="{AFCD8657-221B-46A7-AB49-513C9C5D22A1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Territory"
+              DTS:DTSID="{AC0AA322-0B42-4637-B9CF-04EB7DF0080E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SalesTeam"
+              DTS:DTSID="{FA8F7FFE-3906-4D25-9203-B63C20344D78}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sales"
+              DTS:DTSID="{7D08D3FD-DCF8-47FD-AD05-BC45814EB5E6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Redemptions"
+              DTS:DTSID="{CB53196C-B340-48A3-A49E-F525522ABF12}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NetSales"
+              DTS:DTSID="{CEF5DBB4-12DA-4584-8DD2-AB05CAE4948D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="RepName"
+              DTS:DTSID="{EE21B299-BF07-4D24-8769-06F8388201FA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FirmName"
+              DTS:DTSID="{9B330D15-1BD8-4DE1-8077-62AFFA843305}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
@@ -66,19 +177,18 @@
       DTS:Namespace="User"
       DTS:ObjectName="postingDate">
       <DTS:VariableValue
-        DTS:DataType="8"
-        xml:space="preserve"></DTS:VariableValue>
+        DTS:DataType="8">2023-05-30</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Aggregate Alpha Simplex DailyTransactions"
+      DTS:refId="Package\Aggregate Alpha Simplex Daily Transactions"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{C404A27E-4618-4121-A9E7-3DA1786FDB68}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Aggregate Alpha Simplex DailyTransactions"
+      DTS:ObjectName="Aggregate Alpha Simplex Daily Transactions"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -86,7 +196,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions"
+              refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
@@ -110,7 +220,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">EXEC dbo.AggregateAlphaSimplexDailyTransactions '2023-01-01'</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">EXEC dbo.AggregateAlphaSimplexDailyTransactions ?</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -131,11 +241,11 @@
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
+                  name="ParameterMapping">"@postingDate:Input",{1982723F-D1A3-47E3-888C-2D8C163A2FBC};</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Connections[OleDbConnection]"
+                  refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Connections[OleDbConnection]"
                   connectionManagerID="{9DD1B4EB-BC36-4152-8F5D-27698F35A255}:external"
                   connectionManagerRefId="Project.ConnectionManagers[VirtusSalesDataMart]"
                   description="The OLE DB runtime connection used to access the database."
@@ -143,174 +253,174 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output]"
+                  refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[PostingDate]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[PostingDate]"
                       dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[PostingDate]"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[PostingDate]"
+                      externalMetadataColumnId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[PostingDate]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[PostingDate]"
                       name="PostingDate"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[FundName]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[FundName]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[FundName]"
+                      externalMetadataColumnId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[FundName]"
                       length="100"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[FundName]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[FundName]"
                       name="FundName"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[Channel]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[Channel]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[Channel]"
+                      externalMetadataColumnId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[Channel]"
                       length="30"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[Channel]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[Channel]"
                       name="Channel"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[Territory]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[Territory]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[Territory]"
+                      externalMetadataColumnId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[Territory]"
                       length="10"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[Territory]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[Territory]"
                       name="Territory"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[SalesTeam]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[SalesTeam]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[SalesTeam]"
+                      externalMetadataColumnId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[SalesTeam]"
                       length="128"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[SalesTeam]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[SalesTeam]"
                       name="SalesTeam"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[Sales]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[Sales]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[Sales]"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[Sales]"
+                      externalMetadataColumnId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[Sales]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[Sales]"
                       name="Sales"
                       precision="38"
                       scale="2"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[Redemptions]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[Redemptions]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[Redemptions]"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[Redemptions]"
+                      externalMetadataColumnId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[Redemptions]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[Redemptions]"
                       name="Redemptions"
                       precision="38"
                       scale="2"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[NetSales]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[NetSales]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[NetSales]"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[NetSales]"
+                      externalMetadataColumnId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[NetSales]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[NetSales]"
                       name="NetSales"
                       precision="38"
                       scale="2"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[RepName]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[RepName]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[RepName]"
+                      externalMetadataColumnId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[RepName]"
                       length="100"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[RepName]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[RepName]"
                       name="RepName"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[FirmName]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[FirmName]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[FirmName]"
+                      externalMetadataColumnId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[FirmName]"
                       length="100"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[FirmName]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[FirmName]"
                       name="FirmName"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[PostingDate]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[PostingDate]"
                       dataType="dbDate"
                       name="PostingDate" />
                     <externalMetadataColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[FundName]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[FundName]"
                       codePage="1252"
                       dataType="str"
                       length="100"
                       name="FundName" />
                     <externalMetadataColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[Channel]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[Channel]"
                       codePage="1252"
                       dataType="str"
                       length="30"
                       name="Channel" />
                     <externalMetadataColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[Territory]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[Territory]"
                       codePage="1252"
                       dataType="str"
                       length="10"
                       name="Territory" />
                     <externalMetadataColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[SalesTeam]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[SalesTeam]"
                       codePage="1252"
                       dataType="str"
                       length="128"
                       name="SalesTeam" />
                     <externalMetadataColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[Sales]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[Sales]"
                       dataType="numeric"
                       name="Sales"
                       precision="38"
                       scale="2" />
                     <externalMetadataColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[Redemptions]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[Redemptions]"
                       dataType="numeric"
                       name="Redemptions"
                       precision="38"
                       scale="2" />
                     <externalMetadataColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[NetSales]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[NetSales]"
                       dataType="numeric"
                       name="NetSales"
                       precision="38"
                       scale="2" />
                     <externalMetadataColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[RepName]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[RepName]"
                       codePage="1252"
                       dataType="str"
                       length="100"
                       name="RepName" />
                     <externalMetadataColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[FirmName]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].ExternalColumns[FirmName]"
                       codePage="1252"
                       dataType="str"
                       length="100"
@@ -318,88 +428,88 @@
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[PostingDate]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[PostingDate]"
                       dataType="dbDate"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[PostingDate]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[PostingDate]"
                       name="PostingDate" />
                     <outputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[FundName]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[FundName]"
                       codePage="1252"
                       dataType="str"
                       length="100"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[FundName]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[FundName]"
                       name="FundName" />
                     <outputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[Channel]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[Channel]"
                       codePage="1252"
                       dataType="str"
                       length="30"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[Channel]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[Channel]"
                       name="Channel" />
                     <outputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[Territory]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[Territory]"
                       codePage="1252"
                       dataType="str"
                       length="10"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[Territory]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[Territory]"
                       name="Territory" />
                     <outputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[SalesTeam]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[SalesTeam]"
                       codePage="1252"
                       dataType="str"
                       length="128"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[SalesTeam]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[SalesTeam]"
                       name="SalesTeam" />
                     <outputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[Sales]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[Sales]"
                       dataType="numeric"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[Sales]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[Sales]"
                       name="Sales"
                       precision="38"
                       scale="2" />
                     <outputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[Redemptions]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[Redemptions]"
                       dataType="numeric"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[Redemptions]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[Redemptions]"
                       name="Redemptions"
                       precision="38"
                       scale="2" />
                     <outputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[NetSales]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[NetSales]"
                       dataType="numeric"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[NetSales]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[NetSales]"
                       name="NetSales"
                       precision="38"
                       scale="2" />
                     <outputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[RepName]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[RepName]"
                       codePage="1252"
                       dataType="str"
                       length="100"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[RepName]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[RepName]"
                       name="RepName" />
                     <outputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[FirmName]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[FirmName]"
                       codePage="1252"
                       dataType="str"
                       length="100"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[FirmName]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[FirmName]"
                       name="FirmName" />
                     <outputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -408,482 +518,191 @@
               </outputs>
             </component>
             <component
-              refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV"
-              componentClassID="Microsoft.ManagedComponentHost"
-              contactInfo="KingswaySoft Inc.; http://www.kingswaysoft.com; support@kingswaysoft.com; Copyright (c) 2022 KingswaySoft Inc."
-              description="Write data to a flat file managed by a supported Premium File Pack connection."
-              name="AggregateAlphaSimplexDailyTransactions CSV"
-              usesDispositions="true"
-              version="3">
+              refId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Flat File Destination"
+              version="1">
               <properties>
                 <property
-                  dataType="System.String"
-                  expressionType="Notify"
-                  name="Locale">en-US</property>
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
                 <property
-                  dataType="System.Int32"
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
                   expressionType="Notify"
-                  name="CodePage">1252</property>
+                  name="Header" />
                 <property
                   dataType="System.Boolean"
-                  expressionType="Notify"
-                  name="CompressFile">false</property>
-                <property
-                  dataType="System.Int32"
-                  expressionType="Notify"
-                  name="CompressionType"
-                  typeConverter="KingswaySoft.IntegrationToolkit.PremiumFilePack.Shared.CompressionType">0</property>
-                <property
-                  dataType="System.Boolean"
-                  expressionType="Notify"
-                  name="FirstRowHasHeader">false</property>
-                <property
-                  dataType="System.Int32"
-                  expressionType="Notify"
-                  name="FileFormat"
-                  typeConverter="KingswaySoft.IntegrationToolkit.PremiumFilePack.Shared.FileFormat">0</property>
-                <property
-                  dataType="System.String"
-                  expressionType="Notify"
-                  name="RowDelimiter">Newline DOS or Unix</property>
-                <property
-                  dataType="System.String"
-                  expressionType="Notify"
-                  name="ColumnDelimiter">,</property>
-                <property
-                  dataType="System.String"
-                  expressionType="Notify"
-                  name="TextQualifier">Double-Quote ( " )</property>
-                <property
-                  dataType="System.String"
-                  expressionType="Notify"
-                  name="PaddingCharacter">Space (   )</property>
-                <property
-                  dataType="System.String"
-                  expressionType="Notify"
-                  name="DestinationFilePath">C:\test\AlphaSimplexDailyTransactions.csv</property>
-                <property
-                  dataType="System.Boolean"
-                  expressionType="Notify"
-                  name="AppendToFile">false</property>
-                <property
-                  dataType="System.Boolean"
-                  expressionType="Notify"
-                  name="SkipWriteOnNoRows">false</property>
-                <property
-                  dataType="System.Int32"
-                  expressionType="Notify"
-                  name="TextAlignment"
-                  typeConverter="KingswaySoft.IntegrationToolkit.PremiumFilePack.Shared.TextAlignment">0</property>
-                <property
-                  dataType="System.Int32"
-                  expressionType="Notify"
-                  name="ValueOverflowHandling"
-                  typeConverter="KingswaySoft.IntegrationToolkit.PremiumFilePack.Shared.ValueOverflowHandling">0</property>
-                <property
-                  dataType="System.Int32"
-                  expressionType="Notify"
-                  name="Dividers"
-                  typeConverter="KingswaySoft.IntegrationToolkit.PremiumFilePack.Shared.Dividers">0</property>
-                <property
-                  dataType="System.String"
-                  expressionType="Notify"
-                  name="VerticalDivider">Vertical Bar ( | )</property>
-                <property
-                  dataType="System.String"
-                  expressionType="Notify"
-                  name="HorizontalDivider">Hyphen ( - )</property>
-                <property
-                  dataType="System.String"
-                  name="UserComponentTypeName">KingswaySoft.IntegrationToolkit.PremiumFilePack.Shared.PremiumFlatFileDestinationComponent</property>
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
               </properties>
+              <connections>
+                <connection
+                  refId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
               <inputs>
                 <input
-                  refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
+                  refId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input]"
                   hasSideEffects="true"
-                  name="Primary Input">
+                  name="Flat File Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].Columns[PostingDate]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].Columns[PostingDate]"
                       cachedDataType="dbDate"
                       cachedName="PostingDate"
-                      externalMetadataColumnId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].ExternalColumns[PostingDate]"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[PostingDate]" />
+                      externalMetadataColumnId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PostingDate]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[PostingDate]" />
                     <inputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].Columns[FundName]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].Columns[FundName]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="FundName"
-                      externalMetadataColumnId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].ExternalColumns[FundName]"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[FundName]" />
+                      externalMetadataColumnId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FundName]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[FundName]" />
                     <inputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].Columns[Channel]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].Columns[Channel]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="30"
                       cachedName="Channel"
-                      externalMetadataColumnId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].ExternalColumns[Channel]"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[Channel]" />
+                      externalMetadataColumnId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Channel]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[Channel]" />
                     <inputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].Columns[Territory]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].Columns[Territory]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="10"
                       cachedName="Territory"
-                      externalMetadataColumnId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].ExternalColumns[Territory]"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[Territory]" />
+                      externalMetadataColumnId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Territory]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[Territory]" />
                     <inputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].Columns[SalesTeam]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].Columns[SalesTeam]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="128"
                       cachedName="SalesTeam"
-                      externalMetadataColumnId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].ExternalColumns[SalesTeam]"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[SalesTeam]" />
+                      externalMetadataColumnId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SalesTeam]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[SalesTeam]" />
                     <inputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].Columns[Sales]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].Columns[Sales]"
                       cachedDataType="numeric"
                       cachedName="Sales"
                       cachedPrecision="38"
                       cachedScale="2"
-                      externalMetadataColumnId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].ExternalColumns[Sales]"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[Sales]" />
+                      externalMetadataColumnId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Sales]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[Sales]" />
                     <inputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].Columns[Redemptions]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].Columns[Redemptions]"
                       cachedDataType="numeric"
                       cachedName="Redemptions"
                       cachedPrecision="38"
                       cachedScale="2"
-                      externalMetadataColumnId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].ExternalColumns[Redemptions]"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[Redemptions]" />
+                      externalMetadataColumnId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Redemptions]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[Redemptions]" />
                     <inputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].Columns[NetSales]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].Columns[NetSales]"
                       cachedDataType="numeric"
                       cachedName="NetSales"
                       cachedPrecision="38"
                       cachedScale="2"
-                      externalMetadataColumnId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].ExternalColumns[NetSales]"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[NetSales]" />
+                      externalMetadataColumnId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[NetSales]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[NetSales]" />
                     <inputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].Columns[RepName]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].Columns[RepName]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="RepName"
-                      externalMetadataColumnId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].ExternalColumns[RepName]"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[RepName]" />
+                      externalMetadataColumnId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[RepName]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[RepName]" />
                     <inputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].Columns[FirmName]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].Columns[FirmName]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="FirmName"
-                      externalMetadataColumnId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].ExternalColumns[FirmName]"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[FirmName]" />
+                      externalMetadataColumnId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FirmName]"
+                      lineageId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output].Columns[FirmName]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].ExternalColumns[PostingDate]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="PostingDate">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="Width">255</property>
-                        <property
-                          dataType="System.Null"
-                          name="FormatString" />
-                        <property
-                          dataType="System.Int32"
-                          name="TextQualifier"
-                          typeConverter="KingswaySoft.IntegrationToolkit.PremiumFilePack.Shared.TextQualifier">2</property>
-                        <property
-                          dataType="System.Null"
-                          name="TextAlignment" />
-                        <property
-                          dataType="System.Null"
-                          name="ValueOverflowHandling" />
-                      </properties>
-                    </externalMetadataColumn>
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PostingDate]"
+                      dataType="dbDate"
+                      name="PostingDate" />
                     <externalMetadataColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].ExternalColumns[FundName]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FundName]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
-                      name="FundName">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="Width">255</property>
-                        <property
-                          dataType="System.Null"
-                          name="FormatString" />
-                        <property
-                          dataType="System.Int32"
-                          name="TextQualifier"
-                          typeConverter="KingswaySoft.IntegrationToolkit.PremiumFilePack.Shared.TextQualifier">2</property>
-                        <property
-                          dataType="System.Null"
-                          name="TextAlignment" />
-                        <property
-                          dataType="System.Null"
-                          name="ValueOverflowHandling" />
-                      </properties>
-                    </externalMetadataColumn>
+                      length="100"
+                      name="FundName" />
                     <externalMetadataColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].ExternalColumns[Channel]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Channel]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
-                      name="Channel">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="Width">255</property>
-                        <property
-                          dataType="System.Null"
-                          name="FormatString" />
-                        <property
-                          dataType="System.Int32"
-                          name="TextQualifier"
-                          typeConverter="KingswaySoft.IntegrationToolkit.PremiumFilePack.Shared.TextQualifier">2</property>
-                        <property
-                          dataType="System.Null"
-                          name="TextAlignment" />
-                        <property
-                          dataType="System.Null"
-                          name="ValueOverflowHandling" />
-                      </properties>
-                    </externalMetadataColumn>
+                      length="30"
+                      name="Channel" />
                     <externalMetadataColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].ExternalColumns[Territory]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Territory]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
-                      name="Territory">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="Width">255</property>
-                        <property
-                          dataType="System.Null"
-                          name="FormatString" />
-                        <property
-                          dataType="System.Int32"
-                          name="TextQualifier"
-                          typeConverter="KingswaySoft.IntegrationToolkit.PremiumFilePack.Shared.TextQualifier">2</property>
-                        <property
-                          dataType="System.Null"
-                          name="TextAlignment" />
-                        <property
-                          dataType="System.Null"
-                          name="ValueOverflowHandling" />
-                      </properties>
-                    </externalMetadataColumn>
+                      length="10"
+                      name="Territory" />
                     <externalMetadataColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].ExternalColumns[SalesTeam]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SalesTeam]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
-                      name="SalesTeam">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="Width">255</property>
-                        <property
-                          dataType="System.Null"
-                          name="FormatString" />
-                        <property
-                          dataType="System.Int32"
-                          name="TextQualifier"
-                          typeConverter="KingswaySoft.IntegrationToolkit.PremiumFilePack.Shared.TextQualifier">2</property>
-                        <property
-                          dataType="System.Null"
-                          name="TextAlignment" />
-                        <property
-                          dataType="System.Null"
-                          name="ValueOverflowHandling" />
-                      </properties>
-                    </externalMetadataColumn>
+                      length="128"
+                      name="SalesTeam" />
                     <externalMetadataColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].ExternalColumns[Sales]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Sales">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="Width">255</property>
-                        <property
-                          dataType="System.Null"
-                          name="FormatString" />
-                        <property
-                          dataType="System.Int32"
-                          name="TextQualifier"
-                          typeConverter="KingswaySoft.IntegrationToolkit.PremiumFilePack.Shared.TextQualifier">2</property>
-                        <property
-                          dataType="System.Null"
-                          name="TextAlignment" />
-                        <property
-                          dataType="System.Null"
-                          name="ValueOverflowHandling" />
-                      </properties>
-                    </externalMetadataColumn>
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Sales]"
+                      dataType="numeric"
+                      name="Sales"
+                      precision="38"
+                      scale="2" />
                     <externalMetadataColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].ExternalColumns[Redemptions]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="Redemptions">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="Width">255</property>
-                        <property
-                          dataType="System.Null"
-                          name="FormatString" />
-                        <property
-                          dataType="System.Int32"
-                          name="TextQualifier"
-                          typeConverter="KingswaySoft.IntegrationToolkit.PremiumFilePack.Shared.TextQualifier">2</property>
-                        <property
-                          dataType="System.Null"
-                          name="TextAlignment" />
-                        <property
-                          dataType="System.Null"
-                          name="ValueOverflowHandling" />
-                      </properties>
-                    </externalMetadataColumn>
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Redemptions]"
+                      dataType="numeric"
+                      name="Redemptions"
+                      precision="38"
+                      scale="2" />
                     <externalMetadataColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].ExternalColumns[NetSales]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
-                      name="NetSales">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="Width">255</property>
-                        <property
-                          dataType="System.Null"
-                          name="FormatString" />
-                        <property
-                          dataType="System.Int32"
-                          name="TextQualifier"
-                          typeConverter="KingswaySoft.IntegrationToolkit.PremiumFilePack.Shared.TextQualifier">2</property>
-                        <property
-                          dataType="System.Null"
-                          name="TextAlignment" />
-                        <property
-                          dataType="System.Null"
-                          name="ValueOverflowHandling" />
-                      </properties>
-                    </externalMetadataColumn>
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[NetSales]"
+                      dataType="numeric"
+                      name="NetSales"
+                      precision="38"
+                      scale="2" />
                     <externalMetadataColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].ExternalColumns[RepName]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[RepName]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
-                      name="RepName">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="Width">255</property>
-                        <property
-                          dataType="System.Null"
-                          name="FormatString" />
-                        <property
-                          dataType="System.Int32"
-                          name="TextQualifier"
-                          typeConverter="KingswaySoft.IntegrationToolkit.PremiumFilePack.Shared.TextQualifier">2</property>
-                        <property
-                          dataType="System.Null"
-                          name="TextAlignment" />
-                        <property
-                          dataType="System.Null"
-                          name="ValueOverflowHandling" />
-                      </properties>
-                    </externalMetadataColumn>
+                      length="100"
+                      name="RepName" />
                     <externalMetadataColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input].ExternalColumns[FirmName]"
+                      refId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[FirmName]"
                       codePage="1252"
                       dataType="str"
-                      length="255"
-                      name="FirmName">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="Width">255</property>
-                        <property
-                          dataType="System.Null"
-                          name="FormatString" />
-                        <property
-                          dataType="System.Int32"
-                          name="TextQualifier"
-                          typeConverter="KingswaySoft.IntegrationToolkit.PremiumFilePack.Shared.TextQualifier">2</property>
-                        <property
-                          dataType="System.Null"
-                          name="TextAlignment" />
-                        <property
-                          dataType="System.Null"
-                          name="ValueOverflowHandling" />
-                      </properties>
-                    </externalMetadataColumn>
+                      length="100"
+                      name="FirmName" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
-              <outputs>
-                <output
-                  refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Outputs[Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Error Output"
-                  synchronousInputId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Outputs[Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Outputs[Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Outputs[Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Outputs[Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                    <outputColumn
-                      refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Outputs[Error Output].Columns[ErrorMessage]"
-                      dataType="wstr"
-                      length="2048"
-                      lineageId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Outputs[Error Output].Columns[ErrorMessage]"
-                      name="ErrorMessage" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Outputs[Default Output]"
-                  exclusionGroup="1"
-                  name="Default Output"
-                  synchronousInputId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input]">
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
             </component>
           </components>
           <paths>
             <path
-              refId="Package\Aggregate Alpha Simplex DailyTransactions.Paths[OLE DB Source Output]"
-              endId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV.Inputs[Primary Input]"
+              refId="Package\Aggregate Alpha Simplex Daily Transactions.Paths[OLE DB Source Output]"
+              endId="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination.Inputs[Flat File Destination Input]"
               name="OLE DB Source Output"
-              startId="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output]" />
+              startId="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -902,51 +721,51 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="288,42.6666666666667"
-          Id="Package\Aggregate Alpha Simplex DailyTransactions"
-          TopLeft="241.538457939258,88.000001656382" />
+          Size="290.666666666667,42.6666666666667"
+          Id="Package\Aggregate Alpha Simplex Daily Transactions"
+          TopLeft="457.788454716881,302.157900424215" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Aggregate Alpha Simplex DailyTransactions">
+    design-time-name="Package\Aggregate Alpha Simplex Daily Transactions">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="278.666666666667,42.6666666666667"
-          Id="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions"
-          TopLeft="311.229162110947,119.649124955592" />
+          Id="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions"
+          TopLeft="591.090269051802,153.859651915309" />
         <NodeLayout
-          Size="304,42.6666666666667"
-          Id="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions CSV"
-          TopLeft="364.999994561076,352.368427685093" />
+          Size="173.333333333334,42.6666666666667"
+          Id="Package\Aggregate Alpha Simplex Daily Transactions\Flat File Destination"
+          TopLeft="653.680545814957,307.742695850972" />
         <EdgeLayout
-          Id="Package\Aggregate Alpha Simplex DailyTransactions.Paths[OLE DB Source Output]"
-          TopLeft="450.56249544428,162.315791622258">
+          Id="Package\Aggregate Alpha Simplex Daily Transactions.Paths[OLE DB Source Output]"
+          TopLeft="730.423602385136,196.526318581976">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="66.4374991167962,190.052636062835"
+              EndConnector="9.92361009648744,111.216377268996"
               Start="0,0"
-              End="66.4374991167962,182.552636062835">
+              End="9.92361009648744,103.716377268996">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,91.0263180314174" />
+                    End="0,51.6081886344981" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,91.0263180314174"
-                    Point2="0,95.0263180314174"
-                    Point3="4,95.0263180314174" />
+                    Point1="0,51.6081886344981"
+                    Point2="0,55.6081886344981"
+                    Point3="4,55.6081886344981" />
                   <mssgle:LineSegment
-                    End="62.4374991167962,95.0263180314174" />
+                    End="5.92361009648744,55.6081886344981" />
                   <mssgle:CubicBezierSegment
-                    Point1="62.4374991167962,95.0263180314174"
-                    Point2="66.4374991167962,95.0263180314174"
-                    Point3="66.4374991167962,99.0263180314174" />
+                    Point1="5.92361009648744,55.6081886344981"
+                    Point2="9.92361009648744,55.6081886344981"
+                    Point3="9.92361009648744,59.6081886344981" />
                   <mssgle:LineSegment
-                    End="66.4374991167962,182.552636062835" />
+                    End="9.92361009648744,103.716377268996" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -959,7 +778,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Aggregate Alpha Simplex DailyTransactions\AggregateAlphaSimplexDailyTransactions">
+    design-time-name="Package\Aggregate Alpha Simplex Daily Transactions\AggregateAlphaSimplexDailyTransactions">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
