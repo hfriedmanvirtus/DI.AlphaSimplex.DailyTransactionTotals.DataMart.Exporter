@@ -3,6 +3,10 @@
   DTS:ObjectName="VirtusSalesDataMart"
   DTS:DTSID="{9DD1B4EB-BC36-4152-8F5D-27698F35A255}"
   DTS:CreationName="OLEDB">
+  <DTS:PropertyExpression
+    DTS:Name="InitialCatalog">@[$Project::DataMart_DatabaseName]</DTS:PropertyExpression>
+  <DTS:PropertyExpression
+    DTS:Name="ServerName">@[$Project::DataMart_ServerName]</DTS:PropertyExpression>
   <DTS:ObjectData>
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="1"
